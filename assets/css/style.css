@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #080808c7;
+    z-index: 5;
+    display: none;
+}
+.modal-content span{
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #b7b5b5;
+    background: #474845b5;
+    padding: .1rem .5rem;
+    cursor: pointer;
+}
+.modal-content span:hover{
+    color: rgba(251, 0, 0, 0.507);
+}
+@keyframes modal{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+.modal-content{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    position: relative;
+    top: 9.5rem;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    animation: modal .5s alternate ease-in-out;
+
+}
+
+.modal-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: modal .5s alternate ease-in-out;
+}
+.block{
+    margin: 0;
+    background: #f4f4f4;
+    position: relative;
+
+}
+.block main{
+    max-width: 1140px;
+    margin:0 auto;
+
+}
+
+.block ul{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px,1fr));
+    grid-auto-rows: 300px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    position: relative;
+}
+#list-img{
+    min-height: 900px;
+}
+.block ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+}
+.block ul li img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 100%;
+}
+.sizes li:nth-child(odd){
+    grid-column: 2 span;
+    grid-row: 2 span;
+    height: 100%;
+} 
+.sizes li:nth-child(even){
+    grid-column: 2 span;
+    grid-row: 1 span;
+    height: 100%;
+} 
+
+.sizes li:last-child{
+    grid-column: 2 span;
+    grid-row: 1 span;
+    height: 100%;
+}
+
+
+/* ---------- CTA ------------- */
+
+.block .cta{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.block .box-cta{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+}
+.block .box-cta a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 30px;
+    color: transparent;
+    border-radius: 5px;
+    position: relative;
+}
+
+.block .box-cta a{
+    background-color: transparent;
+    color: black;
+    box-shadow: inset 0 0 0 3px black;
+    display: block;
+    position: relative;
+}
+
+
+.bubble{
+    position: absolute;
+    z-index: -2;
+    background-color: #ffc107;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+}
+
+
