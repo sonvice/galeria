@@ -1,1 +1,1 @@
-#Galería con JavaScript
+# Galería con JavaScript
